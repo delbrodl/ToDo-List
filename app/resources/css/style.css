@@ -222,6 +222,30 @@ ul.todo li .buttons button.complete svg .fill {
     fill:#25b99a;
 }
 
+.block {
+    position:relative;
+    top:15px;
+    left:25%;
+    margin:auto;
+    width: 50%;
+    min-height: 30px;
+    border: none;
+    background-color: #25b99a;
+    padding: 14px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 8px 1px 2px pgba(44,62,80,0.10);
+}
+
+.block:hover {
+    color: #25b99a;
+    background: #e7e7e7;
+}
+
 ul.todo#completed {
     position: relative;
     padding: 60px 0 0 0;
@@ -239,12 +263,12 @@ ul.todo#completed:before {
 }
 
 ul.todo#todo:empty:after {
-    content: 'You have nothing to do.';
+    content: 'You have nothing to do, lucky you.';
     margin: 15px 0 0 0;
 }
 
 ul.todo#completed:empty:after {
-    content: 'Completed list is empty.';
+    content: 'Completed list is empty... get to it!';
 }
 
 ul.todo#todo:after,
