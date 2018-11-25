@@ -113,3 +113,12 @@ function addItemTodo(text, completed){
 
     list.insertBefore(item, list.childNodes[0]);
 }
+
+function showCompleted() {
+    var x = document.getElementById("completed") 
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}

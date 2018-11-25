@@ -1,7 +1,13 @@
+:root {
+    --aqua: #25b99a;
+    --white: #fff;
+    --background: #edf0f1;
+}
 
 body {
-    background: #edf0f1;
+    background: var(--background);
     padding: 80px 0 0 0;
+    align-content: center;
 }
 
 body, input, button{
@@ -20,7 +26,7 @@ header{
     top: 0;
     left: 0;
     z-index: 5;
-    background: #25b99a;
+    background: var(--aqua);
     box-shadow: 0px, 2px, 4px rgba(44,62,80,0.15);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -75,7 +81,7 @@ header button{
     right: 15px;
     z-index: 2;
     border-radius: 25px;
-    background: #fff;
+    background:var(--white);
     border: 0px;
     box-shadow: none;
     outline: none;
@@ -180,11 +186,11 @@ ul.todo li .buttons button svg {
 
 ul.todo li .buttons button.complete svg {
     border-radius: 11px;
-    border: 1.5px solid #25b99a;
+    border: 1.5px solid var(--aqua);
 }
 
 ul.todo#completed li .buttons button.complete svg {
-    background:#25b99a;
+    background: var(--aqua);
     border: 0px;
 
     transition:background 0.2s ease;
@@ -222,8 +228,8 @@ ul.todo li .buttons button.complete svg .fill {
     fill:#25b99a;
 }
 
-.block {
-    position:relative;
+button.block#display {
+    display:block;
     top:15px;
     left:25%;
     margin:auto;
@@ -231,6 +237,7 @@ ul.todo li .buttons button.complete svg .fill {
     min-height: 30px;
     border: none;
     background-color: #25b99a;
+    margin-top: 30px;
     padding: 14px 12px;
     font-size: 12px;
     font-weight: 500;
@@ -241,7 +248,7 @@ ul.todo li .buttons button.complete svg .fill {
     box-shadow: 8px 1px 2px pgba(44,62,80,0.10);
 }
 
-.block:hover {
+.block#display:hover {
     color: #25b99a;
     background: #e7e7e7;
 }
@@ -279,3 +286,4 @@ ul.todo#completed:after {
     font-size: 12px;
     color: #aaa;
 }
+
