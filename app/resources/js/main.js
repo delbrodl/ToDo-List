@@ -122,3 +122,32 @@ function showCompleted() {
         x.style.display = "none";
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("new-todo-list-form").addEventListener("submit", event => {
+        event.preventDefault();
+        addTodoList(event.currentTarget);
+    });
+})
+
+function addTodoList(form) {
+    let listHolder = document.querySelector('div.contain'); 
+    let newList = getElementFromTemplate('todo-list-template');
+  
+    let newTodoListNameInput = form.querySelector('input[name=new-todo-list-input]');
+    let listName = newTodoListNameInput.value;
+    newTodoListNameInput.value = '';
+    newList.querySelector('h2.list-name').innerText = listName;
+    /* newList.querySelector('input.list-name-input').value = listName; */
+  
+    // Disable the button now that the field is blank
+    /* newTodoListNameInput.nextElementSibling.setAttribute('disabled', true); */
+  
+    listHolder.insertAdjacentElement('beforeend', newList);
+    /* attachEventHandlersToTodoList(newListDom); */
+  }
+
+  function getElementFromTemplate(id) {
+    let domNode = document.importNode(document.getElementById(id).content, true).firstElementChild;
+    return domNode;
+  }
